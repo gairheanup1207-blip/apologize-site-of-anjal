@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>For Kushmita ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;display:flex;justify-content:center;align-items:center;min-height:100vh;overflow:hidden;background:linear-gradient(-45deg,#ff7aa2,#ffc0cb,#ffd6e7,#ff9eb5);background-size:400% 400%;animation:bg 12s ease infinite}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.card{width:min(92%,760px);max-height:90vh;overflow:auto;background:rgba(255,255,255,.2);backdrop-filter:blur(12px);padding:30px;border-radius:24px;color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+h1{text-align:center}.btn{padding:12px 20px;border:none;border-radius:999px;background:#ff3b6b;color:#fff;cursor:pointer;margin:8px}
+.heart{position:fixed;color:#ff2d55;animation:rise linear forwards}
+@keyframes rise{from{transform:translateY(0)}to{transform:translateY(-120vh);opacity:0}}
+</style></head><body>
+<div class="card">
+<h1>❤️ Dear Kushmita ❤️</h1>
+<p>I made this little page because I wanted to say something from my heart.</p>
+<p>I'm truly sorry for hurting you. I understand that my actions made you upset, and I regret that. You deserve kindness, honesty, and respect, and I'm sorry for falling short.</p>
+<p>I'm not asking you to forget everything immediately. I only hope you'll know that my apology is sincere. If you need time or space, I'll respect that. If you're willing to talk someday, I'll be ready to listen.</p>
+<p>Thank you for every smile, every conversation, and every memory we've shared. No matter what happens, I genuinely wish you happiness.</p>
+
+<button class="btn" onclick="document.getElementById('music').play()">🎵 Play Music</button>
+<button class="btn" onclick="showMsg()">❤️ Read My Promise</button>
+
+<p id="msg"></p>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<p style="font-size:.9em;opacity:.9">To add music, place an MP3 file named <b>music.mp3</b> in the same folder as this file.</p>
+</div>
+<script>
+function showMsg(){
+document.getElementById('msg').innerHTML="I promise to learn from my mistakes, communicate better, and respect your feelings. Thank you for reading this. ❤️";
+}
+setInterval(()=>{
+let h=document.createElement('div');
+h.className='heart';
+h.textContent='❤';
+h.style.left=Math.random()*100+'vw';
+h.style.bottom='-20px';
+h.style.fontSize=(16+Math.random()*24)+'px';
+h.style.animationDuration=(4+Math.random()*4)+'s';
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),8000);
+},250);
+</script>
+</body></html>
